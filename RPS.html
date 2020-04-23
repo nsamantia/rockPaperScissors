@@ -12,25 +12,22 @@
 
     </div>
 
+    <div id="score">
+
+    </div>
+
     <script>
        
         function computerPlay(){
             let computerOptions = ['rock', 'paper', 'scissors'];
             return computerOptions[Math.floor(Math.random() * computerOptions.length)];
-        
-
         }
         
-
-
         function playRound (playerSelection){
             let computerSelection = computerPlay();
 
         // playerSelection = prompt("Rock, Paper, or Scissors?");
-            
-            
-
-            
+                 
             if (playerSelection == 'rock' && computerSelection == 'rock'){
                 return 'It\'s a tie!';
             } else if (playerSelection == 'rock' && computerSelection == 'paper'){
@@ -71,8 +68,7 @@
             }
         }
 
-     
-
+    
         let playerScore = 0;
         let computerScore = 0;
         let playerSelection = 0;
