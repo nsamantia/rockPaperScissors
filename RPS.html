@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>RPS DOM</title>
+    <title>RPS</title>
 </head>
 <body>
 
     <div id="container">
-        <button  id="rock">Rock</button>
+        <button id="rock">Rock</button>
         <button type="button" id="paper">Paper</button>
         <button type="button" id="scissors">Scissors</button>
 
     </div>
 
     <div id="score">
+        <!-- paragraph for playerScore-->
+        <p id="ps">Player score:</p>
+
+        <!--paragraph for computerScore-->
+        <p id="cs">Computer score:</p>
+
+        <!--paragraph for announcing the winner-->
+        <p id="winner"></p>
 
     </div>
 
@@ -65,7 +73,9 @@
            for (i = 0; i < 1; i++){
             console.log (playRound (playerSelection), "Player Score: " + playerScore,"Computer Score: " + computerScore);
                 
-            }
+                }
+                document.getElementById("ps").innerHTML = "Player score: " + playerScore;
+                document.getElementById("cs").innerHTML = "Computer score: " + computerScore;
         }
 
     
@@ -93,9 +103,14 @@
             playerSelection = 'scissors';
         }
 
+       // function totalScore(playerScore, computerScore, playerSelection) {
+
+
+        
+
     
     </script>
 
 </body>
- </html>
+</html>
         
