@@ -65,6 +65,7 @@
 
             
         }
+        
 
         function game(){
             let i;
@@ -83,6 +84,8 @@
                 } else if (computerScore == 5) {
                     document.getElementById("winner").innerHTML = "Computer wins!";
                    
+                } else {
+                    document.getElementById("winner").innerHTML = "";
                 }
                 return;
                 
@@ -91,26 +94,24 @@
     
         let playerScore = 0;
         let computerScore = 0;
-        let playerSelection = 0;
-        let computerSelection = computerPlay();
+       let playerSelection = 0;
+       let computerSelection = computerPlay();
       //console.log(game());
 
 
-        const buttons = document.querySelectorAll('button');
-        buttons.forEach((button) => {
-            button.addEventListener('click', (e) => {
-                console.log(game());
-            });
-        });
+       
 
         document.getElementById('rock').onclick = function() {
             playerSelection = 'rock';
+            console.log(game());
         }
         document.getElementById('paper').onclick = function() {
             playerSelection = 'paper';
+            console.log(game());
         }
         document.getElementById('scissors').onclick = function() {
             playerSelection = 'scissors';
+            console.log(game());
         }
 
        // function totalScore(playerScore, computerScore, playerSelection) {
